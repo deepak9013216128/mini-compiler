@@ -1,0 +1,18 @@
+.textarea {
+  background: url(http://i.imgur.com/2cOaJ.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  border-color: #ccc;
+
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.textareaWrapper {
+  display: inline-block;
+  background-image: linear-gradient(#f1f1f1 50%, #f9f9f9 50%);
+  background-size: 100% 32px;
+  background-position: left 10px;
+}

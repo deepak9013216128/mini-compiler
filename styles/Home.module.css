@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .main {
