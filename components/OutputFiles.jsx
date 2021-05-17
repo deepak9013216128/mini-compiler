@@ -48,7 +48,7 @@ export default function OutputFiles() {
     };
 
     fetchData(lexURL, "lex");
-    // fetchData(synURL,'syn');
+    fetchData(synURL, "syn");
     fetchData(machineCodeURL, "machineCode");
   }, []);
 
@@ -85,7 +85,27 @@ export default function OutputFiles() {
           title="Symbol Table"
         />
       )}
-      {/* <Table url="http://localhost:5000/api/output/SynOut.txt" /> */}
+      {state.syn && (
+        <Table
+          columns={[
+            {
+              Header: "COLUMN 1",
+              accessor: "col1",
+            },
+            {
+              Header: "COLUMN 2",
+              accessor: "col2",
+            },
+            {
+              Header: "COLUMN 3",
+              accessor: "col3",
+            },
+          ]}
+          start="0"
+          title="Parse Token"
+          data={state.syn}
+        />
+      )}
       {state.machineCode && (
         <Table
           columns={[
@@ -100,6 +120,11 @@ export default function OutputFiles() {
             {
               Header: "COLUMN 3",
               accessor: "col3",
+            },
+
+            {
+              Header: "COLUMN 4",
+              accessor: "col4",
             },
           ]}
           start="1"
